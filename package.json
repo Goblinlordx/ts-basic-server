@@ -6,7 +6,7 @@
   "scripts": {
     "db-sync": "ts-node src/cmd/db-sync/db-sync",
     "dev": "nodemon --watch src --ext ts --exec 'ts-node src/cmd/server/server.ts'",
-    "shell": "ts-node",
+    "shell": "ts-node -i -e \"import { App } from './src/app/app';declare global { var app: App }; global.app = new App()\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
