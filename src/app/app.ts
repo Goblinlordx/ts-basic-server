@@ -12,6 +12,10 @@ export class App {
 
   public accountQuerier = new AccountQuerier(this.accountRepository)
 
+  dbsync() {
+    return this.db.sync()
+  }
+
   init() {
     return this.db.init()
   }

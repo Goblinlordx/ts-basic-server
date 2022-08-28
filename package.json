@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "db-sync": "ts-node src/cmd/db-sync/db-sync",
     "dev": "nodemon --watch src --ext ts --exec 'ts-node src/cmd/server/server.ts'",
     "shell": "ts-node",
     "test": "echo \"Error: no test specified\" && exit 1"

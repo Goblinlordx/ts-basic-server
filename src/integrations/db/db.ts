@@ -11,7 +11,6 @@ export class DB {
     this.ds = new DataSource({
       type: "sqlite",
       database: "./db.sqlite",
-      synchronize: true,
       logging: true,
       entities: [Account, AccountBasicAuth],
     })
@@ -19,6 +18,10 @@ export class DB {
 
   init() {
     return this.ds.initialize()
+  }
+
+  sync() {
+    return this.ds.synchronize()
   }
 
   getRepository(ent: EntityTarget<ObjectLiteral>) {
