@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "db-sync": "ts-node src/cmd/db-sync/db-sync",
-    "dev": "nodemon --watch src --ext ts --exec 'ts-node src/cmd/server/server.ts'",
+    "dev": "nodemon --watch src --ext ts --exec 'npm run lint && ts-node src/cmd/server/server.ts'",
     "lint": "eslint src/**/*.ts .eslintrc.json tsconfig.json",
     "shell": "ts-node -i -e \"import { App } from './src/app/app';declare global { var app: App }; global.app = new App()\"",
     "prettier": "prettier -w ./src/**/*.ts .eslintrc.json .prettierrc.json tsconfig.json",
