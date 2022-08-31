@@ -1,13 +1,13 @@
 import "reflect-metadata"
-import { IContext } from "../../context/ifc/context"
+import { IContext } from "../../domain/context/ifc/context"
 import { DataSource, EntityTarget, ObjectLiteral } from "typeorm"
-import { Account, AccountBasicAuth } from "../../user/entities/account"
+import { Account, AccountBasicAuth } from "../../domain/IAM/entities/account"
 
 export class DB {
   private ds: DataSource
   private ctxMap = new WeakMap<IContext, string>()
 
-  constructor(...entities: Function[]) {
+  constructor(/* ...entities: Function[] */) {
     this.ds = new DataSource({
       type: "sqlite",
       database: "./db.sqlite",

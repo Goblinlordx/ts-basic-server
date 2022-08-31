@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "db-sync": "ts-node src/cmd/db-sync/db-sync",
+    "init-data": "ts-node src/cmd/init-data/init-data",
     "dev": "nodemon --watch src --ext ts --exec 'npm run lint && ts-node src/cmd/server/server.ts'",
     "lint": "eslint src/**/*.ts .eslintrc.json tsconfig.json",
     "shell": "ts-node -i -e \"import { App } from './src/app/app';declare global { var app: App }; global.app = new App()\"",
@@ -30,6 +31,7 @@
     "reflect-metadata": "^0.1.13",
     "sqlite3": "^5.0.11",
     "typeorm": "^0.3.8",
-    "uuid": "^8.3.2"
+    "uuid": "^8.3.2",
+    "yup": "^0.32.11"
   }
 }

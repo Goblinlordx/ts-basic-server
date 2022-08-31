@@ -26,6 +26,10 @@ export class Account {
 @Entity()
 @Index(["email", "password"])
 export class AccountBasicAuth {
+  constructor(data: Partial<AccountBasicAuth>) {
+    Object.assign(this, data)
+  }
+
   @PrimaryColumn("uuid")
   id!: string
 

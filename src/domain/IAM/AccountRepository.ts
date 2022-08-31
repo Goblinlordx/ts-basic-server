@@ -1,5 +1,5 @@
 import { IContext } from "../context/ifc/context"
-import { DB } from "../integrations/db/db"
+import { DB } from "../../integrations/db/db"
 import { Account } from "./entities/account"
 
 export class AccountRespository {

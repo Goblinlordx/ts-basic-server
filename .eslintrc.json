@@ -3,6 +3,8 @@
   "plugins": ["prettier", "@typescript-eslint"],
   "extends": ["prettier", "plugin:@typescript-eslint/recommended"],
   "rules": {
-    "prettier/prettier": ["error"]
+    "prettier/prettier": ["error"],
+    "@typescript-eslint/no-extra-semi": 0,
+    "@typescript-eslint/no-empty-function": 0
   }
 }

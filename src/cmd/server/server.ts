@@ -1,10 +1,10 @@
-import { App } from "../../app/app"
+import { App } from "../../domain/app/app"
 
 async function main() {
   const app = new App()
   await app.init()
   const ctx = app.contextService.createContext()
-  const res = await app.accountQuerier.getById(ctx, "test")
+  await app.accountQuerier.getById(ctx, "test")
 
   await new Promise(() => {})
 }

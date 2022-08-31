@@ -1,10 +1,11 @@
+import { getIAMDataset } from "../../datasets/IAM/accounts"
 import { App } from "../../domain/app/app"
 
 async function main() {
+  console.log("Initializing data...")
   const app = new App()
-
-  await app.init()
-  await app.dbsync()
+  const { rootAccount } = getIAMDataset(app)
+  console.log(rootAccount)
 }
 
 if (require.main === module) {
